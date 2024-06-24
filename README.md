@@ -91,9 +91,9 @@ history = model.fit(train, epochs=20, validation_data=validation, callbacks=[ten
 
 The training and validation loss and accuracy are plotted to evaluate the model's performance.
 
-![](accuracy.png)
+![](misc/accuracy.png)
 
-![](loss.png)
+![](misc/loss.png)
 
 ### Precision, Recall, and Accuracy
 
@@ -107,10 +107,10 @@ Precision: 0.9411764740943909, Accuracy: 0.9375, Recall: 0.9599999785423279
 
 A test image is loaded and preprocessed, and the model predicts its sentiment.
 
-![](friends-happy-190821.jpg)
+![](misc/friends-happy-190821.jpg)
 
 ```python
-test_image = 'friends-happy-190821.jpg'
+test_image = 'data/happy/friends-happy-190821.jpg'
 img = cv2.imread(test_image)
 resize = tf.image.resize(img, (256, 256))
 plt.imshow(resize.numpy().astype(int))
